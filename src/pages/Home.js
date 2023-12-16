@@ -12,6 +12,7 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import BasicAccordion from './BasicAccordion';
 
 const steps = [
   {
@@ -21,10 +22,10 @@ const steps = [
   {
     label: 'Clean and simple',
     description:
-      'This website is simple, clean and user-friendly. No need of clumsy tutorials that are time-consuming. Create your profile and segregate your files online.',
+      'This website is simple, clean and user-friendly. No need for clumsy tutorials that are time-consuming. Create your profile and segregate your files online.',
   },
   {
-    label: 'Avoid Sensitive Data !',
+    label: 'Avoid Sensitive Data!',
     description: `This site is developed solely for accompanying students along with their academic journey. Avoid the storage of sensitive data as that would be vulnerable to our environment.`,
   },
 ];
@@ -47,12 +48,12 @@ function DrawerAppBar() {
             <a href="/about" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">About us</Button>
             </a>
-            <a href="/signin" style={{ textDecoration: 'none', color: 'white' }}>
-              <Button color="inherit">signin</Button>
-            </a>
             <a href="/signup" style={{ textDecoration: 'none', color: 'white' }}>
-              <Button color="inherit">signup</Button>
-            </a>
+                <Button color="inherit">signup </Button>
+              </a>
+              <a href="/signin" style={{ textDecoration: 'none', color: 'white' }}>
+                <Button color="inherit">signin</Button>
+              </a>
           </div>
         </Toolbar>
       </AppBar>
@@ -79,19 +80,22 @@ function Home() {
         {/* AppBar Component */}
         <DrawerAppBar />
 
-        {/* Stepper Component */}
+        {/* Stepper and Accordion Components */}
         <Box
           sx={{
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: { xs: 'column', md: 'row' },
             alignItems: 'center',
-            justifyContent: 'center',
+            justifyContent: 'space-between',
             flexGrow: 1,
-            marginTop: 6,
-
+            padding: 2,
+            overflowX: 'hidden',
           }}
         >
-          <Box sx={{ maxWidth: 400, flexGrow: 1, width: '100%' }}>
+          <Box sx={{ width: { xs: '100%', md: '50%' }, marginRight: { xs: 0, md: 2 } }}>
+            <BasicAccordion />
+          </Box>
+          <Box sx={{ width: { xs: '100%', md: '50%' } }}>
             <Paper
               square
               elevation={0}
@@ -106,7 +110,7 @@ function Home() {
             >
               <Typography>{steps[activeStep].label}</Typography>
             </Paper>
-            <Box sx={{ height: 250, width: '92%', p: 2, bgcolor: '#DFC79A' }}>
+            <Box sx={{ height: 250, width: '95.9%', p: 2, bgcolor: '#DFC79A', overflowY: 'auto' }}>
               {steps[activeStep].description}
             </Box>
             <MobileStepper
@@ -130,6 +134,7 @@ function Home() {
                 bgcolor: '#F5F5F5',
                 p: 1,
                 mt: 1,
+                alignSelf: 'flex-end', // Align the stepper buttons to the right
               }}
             />
           </Box>

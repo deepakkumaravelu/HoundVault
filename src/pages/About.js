@@ -7,50 +7,57 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Toolbar from '@mui/material/Toolbar';
+import Box from '@mui/material/Box';
+import AppBar from '@mui/material/AppBar';
+import IconButton from '@mui/material/IconButton';
 
-const About = () => {
-    return (<div style={{ background: '#D4FA9E', padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h1>
+
+function DrawerAppBar() {
+    return (
+      
+      
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Toolbar sx={{ justifyContent: 'space-between' }}>
+            <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Hound Vault
+              </Typography>
+            </IconButton>
+  
+            <div>
+              <a href="/home" style={{ textDecoration: 'none', color: 'white' }}>
+                <Button color="inherit">Home</Button>
+              </a>
+              <a href="/about" style={{ textDecoration: 'none', color: 'white' }}>
+                <Button color="inherit">About us</Button>
+              </a>
+              <a href="/signup" style={{ textDecoration: 'none', color: 'white' }}>
+                <Button color="inherit">signup </Button>
+              </a>
+              <a href="/signin" style={{ textDecoration: 'none', color: 'white' }}>
+                <Button color="inherit">signin</Button>
+              </a>
+            </div>
+          </Toolbar>
+        </AppBar>
+      </Box>
+    );
+  }
+  
+function About () {
+    return (
+    
+    <div>
+
+<DrawerAppBar/>
+
+<div style={{ background: '#D4FA9E', padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <h2>
             About Us:
-        </h1>
-        <p>
-
-
-
-            Welcome to Hound Vault !
-            We understand the challenges of managing
-            academic materials,<br></br> and we're here to simplify the process for you.
-            <br></br>
-            <h3>Our Mission</h3>
-
-            At Hound Vault, our mission is to provide students with a secure and user-friendly platform to store and organize <br></br>their study materials. We believe that a well-designed digital vault can make a significant difference in how students approach their academic journey.
-            <br></br>
-            <h3>Secure Storage </h3>
-
-            We prioritize the security of your materials. While offering a convenient digital storage solution,
-            we do not allow <br></br>the storage of sensitive or confidential data. Your privacy is our top priority.Navigating through our platform is a breeze.<br></br>
-            We've designed an intuitive interface that allows you to effortlessly store and retrieve your materials.
-            No tech-savvy skills required! <h3>Individualized Experience</h3>
-
-            We focus on providing a personalized experience for every student,
-            ensuring that you can manage your academic resources with ease.<br></br>
-
-            No Bulk Data, No Hassle
-
-            Unlike other platforms, we're not here for bulk data storage. <br></br>
-            Hound Vault is specifically tailored for students who want a simple, streamlined solution for their study materials.
-
-            <h3>Get Started Today!</h3>
-
-            Ready to experience the convenience of a secure and user-friendly online vault? <br></br>
-            Sign up now and start organizing your academic journey with Hound Vault.
-
-
-        </p>
-
-
-
-        <div style={{ padding: '15px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        </h2>
+         <div style={{ padding: '5px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
             <Card sx={{ maxWidth: 400, padding: '15px', marginLeft: 2, marginRight: 2 }}>
                 <CardActionArea>
                     <CardMedia
@@ -134,6 +141,43 @@ const About = () => {
             </Card>
             
         </div>
+        <p>
+
+
+
+            Welcome to Hound Vault !
+            We understand the challenges of managing
+            academic materials,<br></br> and we're here to simplify the process for you.
+            <br></br>
+            <h3>Our Mission</h3>
+
+            At Hound Vault, our mission is to provide students with a secure and user-friendly platform to store and organize <br></br>their study materials. We believe that a well-designed digital vault can make a significant difference in how students approach their academic journey.
+            <br></br>
+            <h3>Secure Storage </h3>
+
+            We prioritize the security of your materials. While offering a convenient digital storage solution,
+            we do not allow <br></br>the storage of sensitive or confidential data. Your privacy is our top priority.Navigating through our platform is a breeze.<br></br>
+            We've designed an intuitive interface that allows you to effortlessly store and retrieve your materials.
+            No tech-savvy skills required! <h3>Individualized Experience</h3>
+
+            We focus on providing a personalized experience for every student,
+            ensuring that you can manage your academic resources with ease.<br></br>
+
+            No Bulk Data, No Hassle
+
+            Unlike other platforms, we're not here for bulk data storage. <br></br>
+            Hound Vault is specifically tailored for students who want a simple, streamlined solution for their study materials.
+
+            <h3>Get Started Today!</h3>
+
+            Ready to experience the convenience of a secure and user-friendly online vault? <br></br>
+            Sign up now and start organizing your academic journey with Hound Vault.
+
+
+        </p>
+
+
+
 
 
         <CardActions>
@@ -146,6 +190,10 @@ const About = () => {
 
 
     </div>
+    </div>
+    
+    
+    
 
     );
 };

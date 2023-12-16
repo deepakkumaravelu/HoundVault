@@ -8,6 +8,8 @@ import SignUp from './pages/SignUp';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 import About from './pages/About';
+import BasicAccordion from './pages/BasicAccordion';
+
 
 
 
@@ -17,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+     
       <Routes>
 <Route index element={<Home/>}/>
 <Route path='/home' element={<Home/>}/>
@@ -27,9 +30,10 @@ function App() {
 
       </Routes>
       
-    </BrowserRouter>
-   
+    </BrowserRouter> 
     
+  
+   
     
     </div>
   );
