@@ -15,6 +15,7 @@ import BasicAccordion from './pages/BasicAccordion';
 
 
 
+
 function App() {
   return (
     <div className="App">
@@ -32,7 +33,7 @@ function App() {
       
     </BrowserRouter> 
     
-  
+
    
     
     </div>

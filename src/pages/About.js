@@ -64,7 +64,7 @@ function About () {
                         component="img"
                         height="240"
                         image="https://img.freepik.com/premium-vector/web-document-secure-confidential-online-access-internet-website-vector-isolated-digital-privacy-lock-protection-text-file-flat-icon_212005-116.jpg"
-                        alt="green iguana"
+                        alt="img2"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
@@ -93,7 +93,7 @@ function About () {
                         component="img"
                         height="240"
                         image="https://img.freepik.com/premium-vector/file-transfer-two-laptops-with-folders-screen-transferred-documents-copy-files-data-exchange-backup-file-sharing-concepts-upload-document-flat-style-vector-illustration_735449-148.jpg?w=2000"
-                        alt="green iguana"
+                        alt="img1"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
@@ -122,7 +122,7 @@ function About () {
                         component="img"
                         height="240"
                         image="https://img.freepik.com/free-vector/set-different-teachers_23-2148518534.jpg?w=2000"
-                        alt="green iguana"
+                        alt="img3"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">

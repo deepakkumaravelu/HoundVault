@@ -8,7 +8,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 export default function BasicAccordion() {
   return (
     <div style={{ borderRadius:"8px", padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Accordion sx={{backgroundColor:"pink"}}>
+      <Accordion sx={{backgroundColor:"#EF81E0"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"

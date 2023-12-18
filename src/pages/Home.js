@@ -9,10 +9,14 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MobileStepper from '@mui/material/MobileStepper';
 import Paper from '@mui/material/Paper';
-import Button from '@mui/material/Button';
+
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import BasicAccordion from './BasicAccordion';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import { Button, CardActionArea, CardActions } from '@mui/material';
 
 const steps = [
   {
@@ -49,15 +53,64 @@ function DrawerAppBar() {
               <Button color="inherit">About us</Button>
             </a>
             <a href="/signup" style={{ textDecoration: 'none', color: 'white' }}>
-                <Button color="inherit">signup </Button>
-              </a>
-              <a href="/signin" style={{ textDecoration: 'none', color: 'white' }}>
-                <Button color="inherit">signin</Button>
-              </a>
+              <Button color="inherit">signup </Button>
+            </a>
+            <a href="/signin" style={{ textDecoration: 'none', color: 'white' }}>
+              <Button color="inherit">signin</Button>
+            </a>
           </div>
         </Toolbar>
       </AppBar>
     </Box>
+  );
+}
+
+function Extra() {
+  return (
+    <div style={{ display: 'flex', padding: '20px', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+      <Card sx={{ maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#46F0E1" }}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="300"
+            image="https://img.freepik.com/free-vector/business-team-brainstorm-idea-lightbulb-from-jigsaw-working-team-collaboration-enterprise-cooperation-colleagues-mutual-assistance-concept-pinkish-coral-bluevector-isolated-illustration_335657-1651.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1702684800&semt=ais"
+            alt="work"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+             <h3> For work</h3>
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              <h4>
+              Work efficiently on projects, stay in sync, and keep company data safe—all in one place. This place is can be used as a locker to store work/business-related docs and files.
+              </h4>
+             
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+       
+      </Card>
+
+      <Card sx={{ maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#46F0E1" }}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="300"
+            image="https://img.freepik.com/free-vector/two-fathers-raising-son_74855-1483.jpg?w=2000"
+            alt="work"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              <h3>For personal</h3>
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+             <h4> Keep everything that’s important to you and your family safe in one place. Back up files, materials, and more. Make use of this place to store your memories and personal files.</h4>
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      
+      </Card>
+    </div>
   );
 }
 
@@ -76,7 +129,7 @@ function Home() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ backgroundColor: '#D4FA9E', display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      <Box sx={{ backgroundColor: '#D4FA9E', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         {/* AppBar Component */}
         <DrawerAppBar />
 
@@ -90,6 +143,7 @@ function Home() {
             flexGrow: 1,
             padding: 2,
             overflowX: 'hidden',
+            width: '96%',
           }}
         >
           <Box sx={{ width: { xs: '100%', md: '50%' }, marginRight: { xs: 0, md: 2 } }}>
@@ -105,46 +159,48 @@ function Home() {
                 justifyContent: 'center',
                 height: 50,
                 pl: 2,
-                bgcolor: '#87CEFA', // Light Blue
+                bgcolor: '#9C8DF4', 
               }}
             >
               <Typography>{steps[activeStep].label}</Typography>
             </Paper>
-            <Box sx={{ height: 250, width: '95.9%', p: 2, bgcolor: '#DFC79A', overflowY: 'auto' }}>
+            <Box sx={{ height: 250, width: '95.%', p: 2, bgcolor: '#A0DDEE', overflowY: 'auto' }}>
               {steps[activeStep].description}
             </Box>
             <MobileStepper
-              variant="text"
-              steps={maxSteps}
-              position="static"
-              activeStep={activeStep}
-              nextButton={
-                <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-                  Next
-                  {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-                </Button>
-              }
-              backButton={
-                <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                  {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-                  Back
-                </Button>
-              }
-              sx={{
-                bgcolor: '#F5F5F5',
-                p: 1,
-                mt: 1,
-                alignSelf: 'flex-end', // Align the stepper buttons to the right
-              }}
-            />
+  variant="text"
+  steps={maxSteps}
+  position="static"
+  activeStep={activeStep}
+  nextButton={
+    <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+      Next
+      {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+    </Button>
+  }
+  backButton={
+    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+      {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+      Back
+    </Button>
+  }
+  sx={{
+    bgcolor: '#F5F5F5',
+    p: 1,
+    mt: 1,
+    alignSelf: 'flex-end', 
+    paddingRight: 5, 
+  }}
+/>
           </Box>
         </Box>
+        <Extra />
 
         {/* Footer Component */}
         <Box
           component="footer"
           sx={{
-            py: 3,
+            py: 2,
             px: 2,
             mt: 'auto',
             backgroundColor: (theme) =>
