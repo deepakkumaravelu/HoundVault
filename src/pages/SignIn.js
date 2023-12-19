@@ -77,6 +77,7 @@ export default function SignIn() {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
+            <a href="/main">
             <Button
               type="submit"
               fullWidth
@@ -85,6 +86,8 @@ export default function SignIn() {
             >
               Sign In
             </Button>
+            </a>
+          
             <Grid container sx={{alignContent:'center'}}>
               <Grid item xs>
                 

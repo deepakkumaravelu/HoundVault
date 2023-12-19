@@ -142,13 +142,15 @@ function About () {
             
         </div>
         <p>
-
-
-
-            Welcome to Hound Vault !
+<h2>
+Welcome to Hound Vault !
             We understand the challenges of managing
             academic materials,<br></br> and we're here to simplify the process for you.
             <br></br>
+</h2>
+
+
+          
             <h3>Our Mission</h3>
 
             At Hound Vault, our mission is to provide students with a secure and user-friendly platform to store and organize <br></br>their study materials. We believe that a well-designed digital vault can make a significant difference in how students approach their academic journey.
