@@ -38,7 +38,7 @@ export default function SignUp() {
             
             border:'1px solid blue',
             borderRadius:'8px',
-            padding:'40px',
+            padding:'30px',
             bgcolor: 'beige',
             marginTop: 8,
             display: 'flex',

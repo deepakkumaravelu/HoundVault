@@ -10,8 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import SearchIcon from '@mui/icons-material/Search';
 
-function Extra() 
-{
+function Extra() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [fileList, setFileList] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -53,24 +52,27 @@ function Extra()
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px' }}>
-    <AppBar position="static" sx={{ marginBottom: '40px', borderRadius: "15px", height: "100px", padding: "15px", backgroundColor: "beige", color: "black" }}>
-      <Toolbar>
-        <Typography variant="h5" component="div" sx={{ flexGrow: 1, textAlign: 'left' }}>
-          Upload your files
-        </Typography>
-        <TextField
-          sx={{
-            backgroundColor: "white",
-            borderRadius: "15px", /* Add curved edges to the search bar */
-          }}
-          label="Search files..."
-          variant="outlined"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-          <IconButton onClick={handleSearch} color="inherit">
+      <AppBar position="static" sx={{ marginBottom: '40px', borderRadius: "15px", height: "100px", padding: "15px", backgroundColor: "beige", color: "black" }}>
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'left' }}>
+            Upload your file
+          </Typography>
+          <TextField
+  sx={{
+    backgroundColor: 'white',
+    borderRadius: '25px', 
+    '& .MuiOutlinedInput-root': {
+      borderRadius: '25px'
+    },width:"300px"
+  }}
+  label="Search files"
+  variant="outlined"
+  value={searchTerm}
+  onChange={(e) => setSearchTerm(e.target.value)}
+/>
+          <IconButton onClick={handleSearch} color="inherit">&nbsp;
             <SearchIcon />
-          </IconButton>
+          </IconButton>&nbsp;
           <input
             type="file"
             accept=".pdf,.doc,.docx"
@@ -79,16 +81,15 @@ function Extra()
             onChange={handleFileChange}
           />
           <label htmlFor="file-upload">
-            <IconButton component="span" color="inherit">
-              <CloudUploadIcon />
+            <IconButton component="span" color="inherit" borderRadius="15px">
+              <CloudUploadIcon />&nbsp; <p> Upload</p>
             </IconButton>
           </label>
-          <Button color="inherit" onClick={handleFileUpload}>
-            Upload
-          </Button>
+           
+          
         </Toolbar>
       </AppBar>
-      {/* Your other components go here */}
+      
     </Box>
   );
 };

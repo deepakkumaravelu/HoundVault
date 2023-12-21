@@ -49,6 +49,9 @@ function DrawerAppBar() {
             <a href="/home" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">Home</Button>
             </a>
+            <a href="#apho" style={{ textDecoration: 'none', color: 'white' }}>
+              <Button color="inherit">Aphorisms</Button>
+            </a>
             <a href="#usecase" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">usecase</Button>
             </a>
@@ -61,6 +64,7 @@ function DrawerAppBar() {
             <a href="/signin" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">signin</Button>
             </a>
+            
           </div>
         </Toolbar>
       </AppBar>
@@ -70,8 +74,11 @@ function DrawerAppBar() {
 
 function Extra() {
   return (
-  <div id="usecase">  
- <Typography><h2>Use-cases</h2></Typography>
+  <div id="usecase" style={{backgroundColor:"#BDBDBC",color:"white"}}> 
+  <div style={{textAlign:"left",marginLeft:"25px"}}><Typography variant="h6" style={{padding:"15px"}}>
+             UseCases
+            </Typography></div> 
+ 
   <div style={{ display: 'flex', padding: '20px', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
   
   <Card sx={{ maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#46F0E1" }}>
@@ -194,65 +201,70 @@ function Home() {
 
         {/* Stepper and Accordion Components */}
         <Box
-          sx={{
-            display: 'flex',
-            flexDirection: { xs: 'column', md: 'row' },
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            flexGrow: 1,
-            padding: 2,
-            overflowX: 'hidden',
-            width: '96%',
-          }}
-        >
-          <Box sx={{ width: { xs: '100%', md: '50%' }, marginRight: { xs: 0, md: 2 } }}>
-            <BasicAccordion />
-          </Box>
-          <Box sx={{ width: { xs: '100%', md: '50%' } }}>
-            <Paper
-              square
-              elevation={0}
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                height: 50,
-                pl: 2,
-                bgcolor: '#9C8DF4', 
-              }}
-            >
-              <Typography>{steps[activeStep].label}</Typography>
-            </Paper>
-            <Box sx={{ height: 250, width: '95.%', p: 2, bgcolor: '#A0DDEE', overflowY: 'auto' }}>
-              {steps[activeStep].description}
-            </Box>
-            <MobileStepper
-  variant="text"
-  steps={maxSteps}
-  position="static"
-  activeStep={activeStep}
-  nextButton={
-    <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-      Next
-      {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-    </Button>
-  }
-  backButton={
-    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-      {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-      Back
-    </Button>
-  }
   sx={{
-    bgcolor: '#F5F5F5',
-    p: 1,
-    mt: 1,
-    alignSelf: 'flex-end', 
-    paddingRight: 5, 
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '90vh', 
+    padding: '10px',
   }}
-/>
-          </Box>
-        </Box>
+>
+  <Box sx={{ width: '90%', maxWidth: '800px' }}>
+  </Box>
+  <Box sx={{ width: '90%', maxWidth: '800px', marginTop: '0px' }}>
+    <Paper
+      square
+      elevation={0}
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 70,
+        pl: 2,
+        bgcolor: '#9C8DF4',
+      }}
+    >
+      <Typography><b>{steps[activeStep].label}</b></Typography>
+    </Paper>
+    <Box sx={{ height: 250, width: '96%', p: 2, bgcolor: '#A0DDEE', overflowY: 'auto' }}>
+      {steps[activeStep].description}
+    </Box>
+    <MobileStepper
+      variant="text"
+      steps={maxSteps}
+      position="static"
+      activeStep={activeStep}
+      nextButton={
+        <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+          Next
+          {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+        </Button>
+      }
+      backButton={
+        <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+          {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+          Back
+        </Button>
+      }
+      sx={{
+        bgcolor: '#F5F5F5',
+        p: 1,
+        mt: 1,
+        alignSelf: 'flex-end',
+        paddingRight: 5,
+      }}
+    />
+  </Box>
+</Box>
+<div id="apho" style={{backgroundColor:"Dodgerblue",color:"white"}}>
+<div style={{textAlign:"left",marginLeft:"25px"}}>
+<Typography variant="h6" style={{padding:"15px"}}>
+             Aphorisms
+            </Typography>
+</div>
+        <BasicAccordion />
+</div>
         <Extra />
 
         {/* Footer Component */}
@@ -277,7 +289,6 @@ function Home() {
     </ThemeProvider>
   );
 }
-
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary">

@@ -7,8 +7,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function BasicAccordion() {
   return (
-    <div style={{ borderRadius:"8px", padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Accordion sx={{backgroundColor:"#EF81E0"}}>
+    <div style={{ borderRadius: "8px", padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <Accordion sx={{ backgroundColor: "#B777FE", width: '100%', maxWidth: '700px', marginBottom: '10px' }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -16,17 +16,14 @@ export default function BasicAccordion() {
         >
           <Typography>― Valuable Storage </Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails style={{ padding: '15px' }}>
           <Typography>
-          “Proper storage is about creating a home for something so that minimal effort is required to find it and put it away.”
+            “Proper storage is about creating a home for something so that minimal effort is required to find it and put it away.”
           </Typography>
         </AccordionDetails>
       </Accordion>
-      
 
-
-
-      <Accordion sx={{backgroundColor:"YELLOW"}}>
+      <Accordion sx={{ backgroundColor: "YELLOW", width: '100%', maxWidth: '700px', marginBottom: '10px' }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -34,28 +31,27 @@ export default function BasicAccordion() {
         >
           <Typography>― Value of Data </Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails style={{ padding: '15px' }}>
           <Typography>
-          “In the next three years, the value of data will increase, making it even more valuable than it is today. The more efficiently you store your data, the more benefits your business will see.”
+            “In the next three years, the value of data will increase, making it even more valuable than it is today. The more efficiently you store your data, the more benefits your business will see.”
           </Typography>
         </AccordionDetails>
-        </Accordion>
+      </Accordion>
 
-        <Accordion sx={{backgroundColor:"ORANGE"}}>
+      <Accordion sx={{ backgroundColor: "ORANGE", width: '100%', maxWidth: '700px', marginBottom: '10px' }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel3a-content"
+          id="panel3a-header"
         >
           <Typography>― Security</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails style={{ padding: '15px' }}>
           <Typography>
-          "Safety and security don't just happen; they are the result of collective consensus and public investment."
+            "Safety and security don't just happen; they are the result of collective consensus and public investment."
           </Typography>
         </AccordionDetails>
-        </Accordion>
-     
+      </Accordion>
     </div>
   );
 }
