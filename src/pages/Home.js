@@ -49,6 +49,9 @@ function DrawerAppBar() {
             <a href="/home" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">Home</Button>
             </a>
+            <a href="#usecase" style={{ textDecoration: 'none', color: 'white' }}>
+              <Button color="inherit">usecase</Button>
+            </a>
             <a href="/about" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">About us</Button>
             </a>
@@ -67,50 +70,106 @@ function DrawerAppBar() {
 
 function Extra() {
   return (
-    <div style={{ display: 'flex', padding: '20px', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-      <Card sx={{ maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#46F0E1" }}>
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            height="300"
-            image="https://img.freepik.com/free-vector/business-team-brainstorm-idea-lightbulb-from-jigsaw-working-team-collaboration-enterprise-cooperation-colleagues-mutual-assistance-concept-pinkish-coral-bluevector-isolated-illustration_335657-1651.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1702684800&semt=ais"
-            alt="work"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-             <h3> For work</h3>
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              <h4>
-              Work efficiently on projects, stay in sync, and keep company data safe—all in one place. This place is can be used as a locker to store work/business-related docs and files.
-              </h4>
-             
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-       
-      </Card>
+  <div id="usecase">  
+ <Typography><h2>Use-cases</h2></Typography>
+  <div style={{ display: 'flex', padding: '20px', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+  
+  <Card sx={{ maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#46F0E1" }}>
+    <CardActionArea>
+      <CardMedia
+        component="img"
+        height="300"
+        image="https://img.freepik.com/free-vector/business-team-brainstorm-idea-lightbulb-from-jigsaw-working-team-collaboration-enterprise-cooperation-colleagues-mutual-assistance-concept-pinkish-coral-bluevector-isolated-illustration_335657-1651.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1702684800&semt=ais"
+        alt="work"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+         <h3> For company projects</h3>
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          <h4>
+          Work efficiently on projects, stay in sync, and keep company data safe—all in one place. This place is can be used to store work/business-related docs and files.
+          </h4>
+         
+        </Typography>
+      </CardContent>
+    </CardActionArea>
+   
+  </Card>
 
-      <Card sx={{ maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#46F0E1" }}>
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            height="300"
-            image="https://img.freepik.com/free-vector/two-fathers-raising-son_74855-1483.jpg?w=2000"
-            alt="work"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              <h3>For personal</h3>
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-             <h4> Keep everything that’s important to you and your family safe in one place. Back up files, materials, and more. Make use of this place to store your memories and personal files.</h4>
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      
-      </Card>
-    </div>
+  <Card sx={{ maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#46F0E1" }}>
+    <CardActionArea>
+      <CardMedia
+        component="img"
+        height="300"
+        image="https://img.freepik.com/free-vector/two-fathers-raising-son_74855-1483.jpg?w=2000"
+        alt="work"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          <h3>For personal</h3>
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         <h4> Keep everything that’s important to you and your family safe in one place. Back up files, materials, and more. Make use of this place to store your memories and personal files.</h4>
+        </Typography>
+      </CardContent>
+    </CardActionArea>
+  
+  </Card>
+</div>
+<div style={{ display: 'flex', padding: '20px', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+  
+  <Card sx={{ maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#46F0E1" }}>
+    <CardActionArea>
+      <CardMedia
+        component="img"
+        height="300"
+        image="https://thumbs.dreamstime.com/b/programmer-working-program-web-developer-coding-computer-screen-code-script-open-windows-coder-engineer-vector-208530984.jpg"
+        alt="work"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+         <h3> For coders</h3>
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          <h4>
+          Code files can be logically organized into folders and subfolders, mimicking the structure of your project.This also provides Back-up.
+          </h4>
+         
+        </Typography>
+      </CardContent>
+    </CardActionArea>
+   
+  </Card>
+
+  <Card sx={{ maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#46F0E1" }}>
+    <CardActionArea>
+      <CardMedia
+        component="img"
+        height="300"
+        image="https://img.freepik.com/free-vector/coronavirus-news-update-illustration_52683-51043.jpg"
+        alt="work"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          <h3>File-shelves</h3>
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         <h4>Viable option for storing publishing materials. Convenient for frequent travelers or those with limited physical storage space.</h4>
+        </Typography>
+      </CardContent>
+    </CardActionArea>
+  
+  </Card>
+</div>
+
+
+
+
+
+
+
+</div>
   );
 }
 

@@ -52,18 +52,22 @@ function Extra()
   }, []);
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px'}}>
-      <AppBar position="static" sx={{ marginBottom: '40px',borderRadius:"15px",height:"100px",padding:"15px",backgroundColor:"beige",color:"black" }}>
-        <Toolbar>
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1, textAlign: 'left' }}>
-          Upload your files 
-          </Typography>
-          <TextField sx={{backgroundColor:"white"}}
-            label="Search files..."
-            variant="outlined"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px' }}>
+    <AppBar position="static" sx={{ marginBottom: '40px', borderRadius: "15px", height: "100px", padding: "15px", backgroundColor: "beige", color: "black" }}>
+      <Toolbar>
+        <Typography variant="h5" component="div" sx={{ flexGrow: 1, textAlign: 'left' }}>
+          Upload your files
+        </Typography>
+        <TextField
+          sx={{
+            backgroundColor: "white",
+            borderRadius: "15px", /* Add curved edges to the search bar */
+          }}
+          label="Search files..."
+          variant="outlined"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
           <IconButton onClick={handleSearch} color="inherit">
             <SearchIcon />
           </IconButton>
