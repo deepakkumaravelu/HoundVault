@@ -15,7 +15,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import FolderIcon from '@mui/icons-material/Folder';
 import DeleteIcon from '@mui/icons-material/Delete';
-import Button from '@mui/material/Button';
+
 
 import AppBar from '@mui/material/AppBar';
 
@@ -26,19 +26,17 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 function DenseAppBar() {
   return (
-   
-<AppBar sx={{backgroundColor:"#C3073F"}} position="static">
-  <Toolbar>
-  
-    <Typography variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"left" }}>
-   Trash
-    </Typography>
-    <a style={{color:"white"}} href="/main" ><Button color="inherit">DashBoard</Button></a>
-    <a style={{color:"white"}} href="/profile" ><Button color="inherit">profile</Button></a>
-    <a style={{color:"white"}} href="/trash" ><Button color="inherit">trash</Button></a>
-
-  </Toolbar>
-</AppBar>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar variant="dense">
+         
+      
+          <Typography variant="h6" color="inherit" component="div">
+            Trash
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 }
 

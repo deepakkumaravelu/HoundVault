@@ -8,7 +8,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 export default function BasicAccordion() {
   return (
     <div style={{ borderRadius: "8px", padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Accordion sx={{ backgroundColor: "#EF81E0", width: '100%', maxWidth: '500px', marginBottom: '10px' }}>
+      <Accordion sx={{ backgroundColor: "#B777FE", width: '100%', maxWidth: '700px', marginBottom: '10px' }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -23,7 +23,7 @@ export default function BasicAccordion() {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion sx={{ backgroundColor: "YELLOW", width: '100%', maxWidth: '500px', marginBottom: '10px' }}>
+      <Accordion sx={{ backgroundColor: "YELLOW", width: '100%', maxWidth: '700px', marginBottom: '10px' }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -38,7 +38,7 @@ export default function BasicAccordion() {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion sx={{ backgroundColor: "ORANGE", width: '100%', maxWidth: '500px', marginBottom: '10px' }}>
+      <Accordion sx={{ backgroundColor: "ORANGE", width: '100%', maxWidth: '700px', marginBottom: '10px' }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3a-content"

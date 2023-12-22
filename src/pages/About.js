@@ -49,16 +49,16 @@ function DrawerAppBar() {
 function About () {
     return (
     
-    <div>
+    <div style={{ background: '#D4FA9E'}}>
 
-<DrawerAppBar/>
-
-<div style={{ background: '#D4FA9E', padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h2>
+<DrawerAppBar/> <h2>
             About Us:
         </h2>
+
+<div style={{padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+       
          <div style={{ padding: '5px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
-            <Card sx={{ maxWidth: 400, padding: '15px', marginLeft: 2, marginRight: 2 }}>
+            <Card sx={{ maxWidth: 300, padding: '15px', marginLeft: 2, marginRight: 2 }}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
@@ -87,7 +87,7 @@ function About () {
 
 
 
-            <Card sx={{ maxWidth: 400, padding: '15px', marginLeft: 2, marginRight: 2 }}>
+            <Card sx={{ maxWidth: 300, padding: '15px', marginLeft: 2, marginRight: 2 }}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
@@ -116,7 +116,7 @@ function About () {
 
 
 
-            <Card sx={{ maxWidth: 400, padding: '15px', marginLeft: 2, marginRight: 2 }}>
+            <Card sx={{ maxWidth: 300, padding: '15px', marginLeft: 2, marginRight: 2 }}>
                 <CardActionArea>
                     <CardMedia
                         component="img"

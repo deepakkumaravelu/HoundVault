@@ -25,11 +25,11 @@ console.log(currentTime); // output: "7/20/2021, 2:28:15 PM" (will vary dependin
   <Toolbar>
   
     <Typography variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"left" }}>
-      Hound Vault 
+    Welcome to  Hound Vault
     </Typography>
     <a style={{color:"white"}} href="/main" ><Button color="inherit">DashBoard</Button></a>
     <a style={{color:"white"}} href="/profile" ><Button color="inherit">profile</Button></a>
-
+    <a style={{color:"white"}} href="/trash" ><Button color="inherit">trash</Button></a>
 <Button color="inherit">{currentTime}</Button>
   </Toolbar>
 </AppBar>
