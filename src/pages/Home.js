@@ -37,7 +37,7 @@ const steps = [
 function DrawerAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{backgroundColor:"#C3073F"}}>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -53,7 +53,7 @@ function DrawerAppBar() {
               <Button color="inherit">Aphorisms</Button>
             </a>
             <a href="#usecase" style={{ textDecoration: 'none', color: 'white' }}>
-              <Button color="inherit">usecase</Button>
+              <Button color="inherit">usecases</Button>
             </a>
             <a href="/about" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">About us</Button>
@@ -74,14 +74,14 @@ function DrawerAppBar() {
 
 function Extra() {
   return (
-  <div id="usecase" style={{backgroundColor:"#BDBDBC",color:"white"}}> 
-  <div style={{textAlign:"left",marginLeft:"25px"}}><Typography variant="h6" style={{padding:"15px"}}>
+  <div id="usecase" style={{backgroundColor:"#4E4E50",color:"white",padding:"25px"}}> 
+  <div style={{textAlign:"center",marginLeft:"25px"}}><Typography variant="h4" style={{padding:"15px"}}>
              UseCases
             </Typography></div> 
  
-  <div style={{ display: 'flex', padding: '20px', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+  <div style={{ display: 'flex', padding: '20px', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
   
-  <Card sx={{ maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#46F0E1" }}>
+  <Card sx={{ maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#C3073F",color:"white" }}>
     <CardActionArea>
       <CardMedia
         component="img"
@@ -104,7 +104,7 @@ function Extra() {
    
   </Card>
 
-  <Card sx={{ maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#46F0E1" }}>
+  <Card sx={{ maxWidth: 500,color:"white", padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#C3073F" }}>
     <CardActionArea>
       <CardMedia
         component="img"
@@ -126,7 +126,7 @@ function Extra() {
 </div>
 <div style={{ display: 'flex', padding: '20px', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
   
-  <Card sx={{ maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#46F0E1" }}>
+  <Card sx={{ maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#C3073F",color:"white" }}>
     <CardActionArea>
       <CardMedia
         component="img"
@@ -149,7 +149,7 @@ function Extra() {
    
   </Card>
 
-  <Card sx={{ maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#46F0E1" }}>
+  <Card sx={{ color:"white",maxWidth: 500, padding: '15px', marginLeft: 2, marginRight: 2,backgroundColor:"#C3073F" }}>
     <CardActionArea>
       <CardMedia
         component="img"
@@ -157,7 +157,7 @@ function Extra() {
         image="https://img.freepik.com/free-vector/coronavirus-news-update-illustration_52683-51043.jpg"
         alt="work"
       />
-      <CardContent>
+      <CardContent sx={{}}>
         <Typography gutterBottom variant="h5" component="div">
           <h3>File-shelves</h3>
         </Typography>
@@ -195,7 +195,7 @@ function Home() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ backgroundColor: '#D4FA9E', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Box sx={{ backgroundColor: '#4E4E50', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         {/* AppBar Component */}
         <DrawerAppBar />
 
@@ -207,7 +207,7 @@ function Home() {
     alignItems: 'center',
     justifyContent: 'center',
     height: '90vh', 
-    padding: '10px',
+    padding: '30px',
   }}
 >
   <Box sx={{ width: '90%', maxWidth: '800px' }}>
@@ -222,12 +222,13 @@ function Home() {
         justifyContent: 'center',
         height: 70,
         pl: 2,
-        bgcolor: '#9C8DF4',
+        bgcolor: '#950740',
+        color:"WHITE"
       }}
     >
       <Typography><b>{steps[activeStep].label}</b></Typography>
     </Paper>
-    <Box sx={{ height: 250, width: '96%', p: 2, bgcolor: '#A0DDEE', overflowY: 'auto' }}>
+    <Box sx={{ height: 250, width: '96%', p: 2, bgcolor: '#1A1A1D', overflowY: 'auto' ,color:"white"}}>
       {steps[activeStep].description}
     </Box>
     <MobileStepper
@@ -257,9 +258,9 @@ function Home() {
     />
   </Box>
 </Box>
-<div id="apho" style={{backgroundColor:"Dodgerblue",color:"white"}}>
-<div style={{textAlign:"left",marginLeft:"25px"}}>
-<Typography variant="h6" style={{padding:"15px"}}>
+<div id="apho" style={{backgroundColor:"#4E4E50",color:"white"}}>
+<div style={{textAlign:"center",marginLeft:"25px"}}>
+<Typography variant="h4" style={{padding:"15px"}}>
              Aphorisms
             </Typography>
 </div>
@@ -271,17 +272,15 @@ function Home() {
         <Box
           component="footer"
           sx={{
-            py: 2,
+            color:"white",
+            py: 1,
             px: 2,
             mt: 'auto',
-            backgroundColor: (theme) =>
-              theme.palette.mode === 'light'
-                ? theme.palette.grey[200]
-                : theme.palette.grey[800],
+            backgroundColor:"#950740",
           }}
         >
           <Container maxWidth="sm">
-            <Typography variant="body1">Stay away from frauds!</Typography>
+           
             <Copyright />
           </Container>
         </Box>
@@ -291,14 +290,20 @@ function Home() {
 }
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary">
-      {'Copyright © '}
-      <Link color="inherit" href="">
-        Hound Vault
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
+   <div>
+     <Typography variant="body1">Stay away from frauds!</Typography>
+
+
+
+<Typography variant="body2" color="white">
+  {'Copyright © '}
+  <Link color="inherit" href="">
+    Hound Vault
+  </Link>{' '}
+  {new Date().getFullYear()}
+  {'.'}
+</Typography>
+   </div>
   );
 }
 

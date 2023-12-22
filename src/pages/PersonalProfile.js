@@ -11,9 +11,31 @@ import {
 import Avatar from '@mui/material/Avatar';
 import LogoutIcon from '@mui/icons-material/Logout';
 
+import AppBar from '@mui/material/AppBar';
+
+import Toolbar from '@mui/material/Toolbar';
+
 export default function PersonalProfile() {
   return (
-    <Container
+
+    <div>
+   
+   <AppBar sx={{backgroundColor:"#C3073F"}} position="static">
+  <Toolbar>
+  
+    <Typography variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"left" }}>
+   Trash
+    </Typography>
+    <a style={{color:"white"}} href="/main" ><Button color="inherit">DashBoard</Button></a>
+    <a style={{color:"white"}} href="/profile" ><Button color="inherit">profile</Button></a>
+    <a style={{color:"white"}} href="/trash" ><Button color="inherit">trash</Button></a>
+
+  </Toolbar>
+</AppBar>
+
+
+
+ <Container
       className="py-5"
       style={{
         backgroundColor: 'white',
@@ -21,7 +43,7 @@ export default function PersonalProfile() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '100vh',
+        height: '80vh',
       }}
     >
       <Grid
@@ -86,5 +108,7 @@ export default function PersonalProfile() {
         </Card>
       </Grid>
     </Container>
+    </div>
+   
   );
 }

@@ -17,11 +17,11 @@ const currentTime = now.toLocaleTimeString();
 
 console.log(currentTime); // output: "7/20/2021, 2:28:15 PM" (will vary depending on your time zone)
   return (
-    <div>
+    <div style={{backgroundColor:"beige"}}>
   <Box sx={{ flexGrow: 1 }}>
 
 
-<AppBar position="static">
+<AppBar sx={{backgroundColor:"#C3073F"}} position="static">
   <Toolbar>
   
     <Typography variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"left" }}>

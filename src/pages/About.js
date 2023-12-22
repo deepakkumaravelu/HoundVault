@@ -18,7 +18,7 @@ function DrawerAppBar() {
       
       
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar sx={{backgroundColor:"#C3073F"}} position="static">
           <Toolbar sx={{ justifyContent: 'space-between' }}>
             <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -49,7 +49,7 @@ function DrawerAppBar() {
 function About () {
     return (
     
-    <div style={{ background: '#D4FA9E'}}>
+    <div style={{ color:"white",background: 'black'}}>
 
 <DrawerAppBar/> <h2>
             About Us:
@@ -58,7 +58,7 @@ function About () {
 <div style={{padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
        
          <div style={{ padding: '5px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
-            <Card sx={{ maxWidth: 300, padding: '15px', marginLeft: 2, marginRight: 2 }}>
+            <Card sx={{ backgroundColor:"#4E4E50",color:"white",maxWidth: 300, padding: '15px', marginLeft: 2, marginRight: 2 }}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
@@ -70,13 +70,13 @@ function About () {
                         <Typography gutterBottom variant="h5" component="div">
                             Secured Documents
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body2" color="text.white">
                             Students can securely store and organize academic documents, such as lecture notes, research papers, and class presentations in their individual vaults.
                         </Typography>
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <a href="/Signup"><Button size="small" color="primary">
+                    <a href="/Signup"><Button sx={{backgroundColor:"#950740",color:"white"}} size="small" color="primary">
                         Secure Now!
                     </Button></a>
 
@@ -87,7 +87,7 @@ function About () {
 
 
 
-            <Card sx={{ maxWidth: 300, padding: '15px', marginLeft: 2, marginRight: 2 }}>
+            <Card sx={{backgroundColor:"#4E4E50",color:"white", maxWidth: 300, padding: '15px', marginLeft: 2, marginRight: 2 }}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
@@ -99,13 +99,13 @@ function About () {
                         <Typography gutterBottom variant="h5" component="div">
                             Minimalistic Storage Approach
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body2" color="text.white">
                             The platform can adopt a minimalist storage approach by allowing users to store links, pointers, or summaries of materials rather than hosting large files directly. This can save storage space and reduce the risk associated with storing bulk data.
                         </Typography>
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <a href="/signup"><Button size="small" color="primary">
+                    <a href="/signup"><Button  sx={{backgroundColor:"#950740",color:"white"}}size="small" color="primary">
                         Save Storage.
                     </Button></a>
                 </CardActions>
@@ -116,7 +116,7 @@ function About () {
 
 
 
-            <Card sx={{ maxWidth: 300, padding: '15px', marginLeft: 2, marginRight: 2 }}>
+            <Card sx={{ backgroundColor:"#4E4E50",color:"white",maxWidth: 300, padding: '15px', marginLeft: 2, marginRight: 2 }}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
@@ -128,13 +128,13 @@ function About () {
                         <Typography gutterBottom variant="h5" component="div">
                             Integrated Vault
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body2" color="text.white">
                             An Integrated Vault that ensures a seamless experience for both students and educators by creating a centralized repository for their academic achievements..
                         </Typography>
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <a href="/signup"><Button size="small" color="primary">
+                    <a href="/signup"><Button  sx={{backgroundColor:"#950740",color:"white"}} size="small" color="primary">
                         Achieve it
                     </Button></a>
                 </CardActions>
