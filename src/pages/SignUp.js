@@ -15,7 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
 
-
+// TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
 
@@ -38,8 +38,8 @@ export default function SignUp() {
             
             border:'1px solid blue',
             borderRadius:'8px',
-            padding:'30px',
-            bgcolor: '#CCCCCC',
+            padding:'50px',
+            bgcolor: 'beige',
             marginTop: 8,
             display: 'flex',
             flexDirection: 'column',

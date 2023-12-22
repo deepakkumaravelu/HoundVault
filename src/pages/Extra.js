@@ -51,8 +51,8 @@ function Extra() {
   }, []);
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px'}}>
-      <AppBar position="static" sx={{ marginBottom: '40px', borderRadius: "15px", height: "100px", padding: "15px", backgroundColor: "#CCCCCC", color: "black" }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px' }}>
+      <AppBar position="static" sx={{ marginBottom: '40px', borderRadius: "15px", height: "100px", padding: "15px", backgroundColor: "beige", color: "black" }}>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'left' }}>
             Upload your file

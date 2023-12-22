@@ -12,9 +12,6 @@ import BasicAccordion from './pages/BasicAccordion';
 import MainPage from './pages/MainPage';
 import Extra from './pages/Extra';
 import PersonalProfile from './pages/PersonalProfile';
-import Trash from './pages/Trash';
-
-
 
 
 
@@ -34,8 +31,6 @@ function App() {
 <Route path='/about' element={<About/>}/>
 <Route path='/main' element={<MainPage/>}/>
 <Route path='/profile' element={<PersonalProfile/>}/>
-<Route path='/trash' element={<Trash/>}/>
-
  </Routes>
  </BrowserRouter> 
 
@@ -43,7 +38,6 @@ function App() {
 
 
    </div>
-
   );
 }
 

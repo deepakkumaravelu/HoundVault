@@ -39,7 +39,7 @@ export default function SignIn() {
            
         borderRadius:'8px',
             padding:'50px',
-            bgcolor: '#CCCCCC',
+            bgcolor: 'beige',
             marginTop: 10,
             display: 'flex',
             flexDirection: 'column',

@@ -17,19 +17,19 @@ const currentTime = now.toLocaleTimeString();
 
 console.log(currentTime); // output: "7/20/2021, 2:28:15 PM" (will vary depending on your time zone)
   return (
-    <div style={{backgroundColor:"beige"}}>
+    <div>
   <Box sx={{ flexGrow: 1 }}>
 
 
-<AppBar sx={{backgroundColor:"#C3073F"}} position="static">
+<AppBar position="static">
   <Toolbar>
   
     <Typography variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"left" }}>
-    Welcome to  Hound Vault
+      Hound Vault 
     </Typography>
     <a style={{color:"white"}} href="/main" ><Button color="inherit">DashBoard</Button></a>
     <a style={{color:"white"}} href="/profile" ><Button color="inherit">profile</Button></a>
-    <a style={{color:"white"}} href="/trash" ><Button color="inherit">trash</Button></a>
+
 <Button color="inherit">{currentTime}</Button>
   </Toolbar>
 </AppBar>

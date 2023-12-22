@@ -7,14 +7,14 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function BasicAccordion() {
   return (
-    <div style={{ borderRadius: "8px", padding: '60px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Accordion sx={{color:"white", backgroundColor: "#C3073F", width: '100%', maxWidth: '700px', marginBottom: '10px' }}>
+    <div style={{ borderRadius: "8px", padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <Accordion sx={{ backgroundColor: "#EF81E0", width: '100%', maxWidth: '500px', marginBottom: '10px' }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography><b>― Valuable Storage</b> </Typography>
+          <Typography>― Valuable Storage </Typography>
         </AccordionSummary>
         <AccordionDetails style={{ padding: '15px' }}>
           <Typography>
@@ -23,13 +23,13 @@ export default function BasicAccordion() {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion sx={{ color:"white",backgroundColor: "#1A1A1D", width: '100%', maxWidth: '700px', marginBottom: '10px' }}>
+      <Accordion sx={{ backgroundColor: "YELLOW", width: '100%', maxWidth: '500px', marginBottom: '10px' }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography><b>― Value of Data</b> </Typography>
+          <Typography>― Value of Data </Typography>
         </AccordionSummary>
         <AccordionDetails style={{ padding: '15px' }}>
           <Typography>
@@ -38,13 +38,13 @@ export default function BasicAccordion() {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion sx={{color:"white", backgroundColor: "#950740", width: '100%', maxWidth: '700px', marginBottom: '10px' }}>
+      <Accordion sx={{ backgroundColor: "ORANGE", width: '100%', maxWidth: '500px', marginBottom: '10px' }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography><b>― Security</b></Typography>
+          <Typography>― Security</Typography>
         </AccordionSummary>
         <AccordionDetails style={{ padding: '15px' }}>
           <Typography>
