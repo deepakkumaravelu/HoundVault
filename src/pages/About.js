@@ -23,18 +23,18 @@ function DrawerAppBar() {
           </IconButton>
 
           <div>
-            <a href="/home" style={{ textDecoration: 'none', color: 'white' }}>
+            <Link to="/home" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">Home</Button>
-            </a>
-            <a href="/about" style={{ textDecoration: 'none', color: 'white' }}>
+            </Link>
+            <Link  to="/about" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">About us</Button>
-            </a>
-            <a href="/signup" style={{ textDecoration: 'none', color: 'white' }}>
+            </Link>
+            <Link to="/signup" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">Signup </Button>
-            </a>
-            <a href="/signin" style={{ textDecoration: 'none', color: 'white' }}>
+            </Link>
+            <Link to="/signin" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">Signin</Button>
-            </a>
+            </Link>
           </div>
         </Toolbar>
       </AppBar>
