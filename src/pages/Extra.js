@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import IconButton from '@mui/material/IconButton';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
@@ -51,25 +50,44 @@ function Extra() {
   }, []);
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px'}}>
-      <AppBar position="static" sx={{ marginBottom: '40px', borderRadius: "15px", height: "100px", padding: "15px", backgroundColor: "#CCCCCC", color: "black" }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: '40px',
+      }}
+    >
+      <AppBar
+        position="static"
+        sx={{
+          marginBottom: '40px',
+          borderRadius: '15px',
+          height: "100px",
+          padding: "15px",
+          backgroundColor: "#CCCCCC",
+          color: "black",
+        }}
+      >
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'left' }}>
             Upload your file
           </Typography>
           <TextField
-  sx={{
-    backgroundColor: 'white',
-    borderRadius: '25px', 
-    '& .MuiOutlinedInput-root': {
-      borderRadius: '25px'
-    },width:"300px"
-  }}
-  label="Search files"
-  variant="outlined"
-  value={searchTerm}
-  onChange={(e) => setSearchTerm(e.target.value)}
-/>
+            sx={{
+              backgroundColor: 'white',
+              borderRadius: { xs: '10px', md: '25px' },
+              '& .MuiOutlinedInput-root': {
+                borderRadius: { xs: '10px', md: '25px' },
+              },
+              width: { xs: '150px', md: '300px' },
+              marginRight: { xs: '0px', md: '10px' },
+            }}
+            label="Search files"
+            variant="outlined"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
           <IconButton onClick={handleSearch} color="inherit">&nbsp;
             <SearchIcon />
           </IconButton>&nbsp;
@@ -85,13 +103,10 @@ function Extra() {
               <CloudUploadIcon />&nbsp; <p> Upload</p>
             </IconButton>
           </label>
-           
-          
         </Toolbar>
       </AppBar>
-      
     </Box>
   );
-};
+}
 
 export default Extra;

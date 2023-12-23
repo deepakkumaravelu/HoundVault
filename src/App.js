@@ -8,9 +8,7 @@ import SignUp from './pages/SignUp';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 import About from './pages/About';
-import BasicAccordion from './pages/BasicAccordion';
 import MainPage from './pages/MainPage';
-import Extra from './pages/Extra';
 import PersonalProfile from './pages/PersonalProfile';
 import Trash from './pages/Trash';
 
