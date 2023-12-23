@@ -23,7 +23,7 @@ function DrawerAppBar() {
           </IconButton>
 
           <div>
-            <Link to="/home" style={{ textDecoration: 'none', color: 'white' }}>
+            <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">Home</Button>
             </Link>
             <Link  to="/about" style={{ textDecoration: 'none', color: 'white' }}>
